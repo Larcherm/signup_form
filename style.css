@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100rem;
+    margin: 0;
+}
+
+.left_side {
+    background-image: url("lighthouse.jpg");
+    flex: 1;
+}
+
+.right_side {
+    flex: 1;
+}
