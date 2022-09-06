@@ -41,6 +41,21 @@ body {
     flex: 1;
 }
 
+.log-img{
+    position:relative;
+}
+.logo-img::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    background-image: url("lightning-tear.svg");
+    width: calc(80px + 1vw);
+    height: calc(80px + 1vw);
+    margin-left: 20px;
+    border-radius: 10px;    
+    top: 10px;
+}
+
 .image-credit {
     margin-left: auto;
     margin-right: auto;
@@ -146,6 +161,7 @@ input:focus {
 input:valid {
     outline: 1px solid #34b233
 }
+
 /* input:valid + span::after {
     position: absolute;
     display: inline-block;
@@ -157,6 +173,7 @@ input:valid {
     bottom: 0.5rem;
 } */
 
+/*Shows invalid styling and messages if user clicked fields*/
 input:invalid:not(:placeholder-shown):not(:focus) {
     outline: 1px solid rgb(180, 0, 0);
 }
