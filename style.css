@@ -170,6 +170,14 @@ input:invalid:not(:placeholder-shown):not(:focus) + span::after {
     font-size: 14px;
 }
 
+input:invalid:not(:placeholder-shown):not(:focus)#password + span::after {
+    content: "*Your password must include a digit, an uppercase and be at least 8 characters long";
+}
+
+input:invalid:not(:placeholder-shown):not(:focus)#confirm-password + span::after {
+    content: "*Passwords don't match";
+}
+
 button {
     background-color: #3d4c63;
     color: #e6f2ff;

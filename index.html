@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>TOP Form</title>
 </head>
 <body>
@@ -66,13 +66,13 @@
                     <div class="form-password field">
                         <label for="password">PASSWORD*</label>
                         <input type="password" id="password" name="passoword" 
-                        placeholder=" " required>
+                        placeholder=" " required class="error" pattern="^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[a-z]).{8,}$">
                         <span></span>
                     </div>
                     <div class="form-confirm-password field">
                         <label for="confirm-password">CONFIRM PASSWORD*</label>
                         <input type="password" id="confirm-password" name="confirm-password" 
-                        placeholder=" " required>
+                        placeholder=" " required class="error">
                         <span></span>
                     </div>
                 </div>
@@ -80,8 +80,8 @@
         </div>
         <div class="last-right-container">
             <div class="submit-div" style="margin-top: 20px; margin-left:20px;">
-                <button styletype="submit" form="form">Create Account</button>
-                <p>Already have an account? <a class="impossible" href="#">That's literally impossible.</a></p>
+                <button type="submit" form="form" id="submit-btn">Create Account</button>
+                <p>Already have an account? <a class="impossible" href="">That's literally impossible.</a></p>
             </div>
         </div>
     </div>
